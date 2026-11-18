@@ -1,0 +1,201 @@
+@import "tailwindcss";
+@source not "../docs";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Warna brand (Indigo Kinetic) */
+  --color-inverse-on-surface: #eef1f8;
+  --color-primary: #04093b;
+  --color-surface-tint: #555b8d;
+  --color-on-primary-fixed: #101645;
+  --color-secondary-fixed: #ffe08a;
+  --color-surface-container-high: #e5e8f0;
+  --color-background: #f8f9ff;
+  --color-outline: #777680;
+  --color-surface-container-low: #f1f3fb;
+  --color-primary-fixed-dim: #bdc3fc;
+  --color-surface-variant: #e0e2ea;
+  --color-inverse-primary: #bdc3fc;
+  --color-on-secondary-container: #6e5700;
+  --color-surface-dim: #d7dae1;
+  --color-on-primary-container: #8389be;
+  --color-error-container: #ffdad6;
+  --color-tertiary: #00131d;
+  --color-on-tertiary-fixed-variant: #004c6a;
+  --color-secondary: #745b00;
+  --color-on-primary: #ffffff;
+  --color-on-tertiary: #ffffff;
+  --color-on-secondary-fixed-variant: #574400;
+  --color-on-error-container: #93000a;
+  --color-on-primary-fixed-variant: #3d4373;
+  --color-on-error: #ffffff;
+  --color-on-tertiary-fixed: #001e2d;
+  --color-secondary-container: #fdcc18;
+  --color-error: #ba1a1a;
+  --color-inverse-surface: #2d3136;
+  --color-on-tertiary-container: #0097cd;
+  --color-tertiary-container: #00293b;
+  --color-on-surface: #181c21;
+  --color-surface-bright: #f8f9ff;
+  --color-on-background: #181c21;
+  --color-outline-variant: #c7c5d0;
+  --color-on-secondary-fixed: #241a00;
+  --color-surface: #f8f9ff;
+  --color-surface-container-highest: #e0e2ea;
+  --color-secondary-fixed-dim: #f1c100;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface-variant: #46464f;
+  --color-surface-container: #ebeef5;
+  --color-primary-fixed: #dfe0ff;
+  --color-primary-container: #1b2150;
+  --color-on-secondary: #ffffff;
+  --color-tertiary-fixed-dim: #7ed0ff;
+  --color-tertiary-fixed: #c5e7ff;
+
+  /* Warna bawaan Tailwind v3 yang dipakai halaman (dipertahankan agar warna tidak bergeser di v4) */
+  --color-amber-500: #f59e0b;
+  --color-amber-600: #d97706;
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-400: #60a5fa;
+  --color-blue-600: #2563eb;
+  --color-blue-900: #1e3a8a;
+  --color-emerald-500: #10b981;
+  --color-emerald-600: #059669;
+  --color-emerald-700: #047857;
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-rose-600: #e11d48;
+  --color-rose-700: #be123c;
+  --color-yellow-400: #facc15;
+  --color-yellow-500: #eab308;
+  --color-gray-200: #e5e7eb;
+
+  /* Radius */
+  --radius-xs: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-pill: 0.75rem;
+
+  /* Spacing */
+  --spacing-gutter-mobile: 1rem;
+  --spacing-space-md: 1rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-space-2xl: 4rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-margin: 3rem;
+  --spacing-space-sm: 0.5rem;
+
+  /* Font */
+  --font-label-sm: "Plus Jakarta Sans", sans-serif;
+  --font-body-md: "Plus Jakarta Sans", sans-serif;
+  --font-display-xl: "Plus Jakarta Sans", sans-serif;
+  --font-label-md: "Plus Jakarta Sans", sans-serif;
+  --font-display-xl-mobile: "Plus Jakarta Sans", sans-serif;
+  --font-headline-md: "Plus Jakarta Sans", sans-serif;
+  --font-body-sm: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg: "Plus Jakarta Sans", sans-serif;
+  --font-category-eyebrow: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg-mobile: "Plus Jakarta Sans", sans-serif;
+  --font-body-lg: "Plus Jakarta Sans", sans-serif;
+  --font-headline-sm: "Plus Jakarta Sans", sans-serif;
+
+  /* Ukuran teks */
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.06em;
+  --text-label-sm--font-weight: 700;
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: 0em;
+  --text-body-md--font-weight: 400;
+  --text-display-xl: 56px;
+  --text-display-xl--line-height: 64px;
+  --text-display-xl--letter-spacing: -0.03em;
+  --text-display-xl--font-weight: 800;
+  --text-label-md: 14px;
+  --text-label-md--line-height: 20px;
+  --text-label-md--letter-spacing: 0.02em;
+  --text-label-md--font-weight: 700;
+  --text-display-xl-mobile: 36px;
+  --text-display-xl-mobile--line-height: 44px;
+  --text-display-xl-mobile--letter-spacing: -0.02em;
+  --text-display-xl-mobile--font-weight: 800;
+  --text-headline-md: 26px;
+  --text-headline-md--line-height: 34px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-md--font-weight: 700;
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--letter-spacing: 0em;
+  --text-body-sm--font-weight: 400;
+  --text-headline-lg: 38px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 700;
+  --text-category-eyebrow: 13px;
+  --text-category-eyebrow--line-height: 18px;
+  --text-category-eyebrow--letter-spacing: 0.14em;
+  --text-category-eyebrow--font-weight: 800;
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-lg-mobile--font-weight: 700;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--letter-spacing: -0.01em;
+  --text-body-lg--font-weight: 400;
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--letter-spacing: 0em;
+  --text-headline-sm--font-weight: 600;
+}
+
+/* Kompatibilitas: warna border bawaan & kursor tombol seperti Tailwind v3 */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

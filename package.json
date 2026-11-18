@@ -1,0 +1,14 @@
+{
+  "name": "durio-indigo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Company profile website PT. Durio Indigo",
+  "scripts": {
+    "dev": "tailwindcss -i ./assets/css/style.css -o ./assets/css/output.css --watch",
+    "build": "tailwindcss -i ./assets/css/style.css -o ./assets/css/output.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}
