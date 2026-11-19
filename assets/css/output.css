@@ -934,11 +934,17 @@
   .gap-x-6 {
     column-gap: calc(var(--spacing) * 6);
   }
+  .gap-x-gutter {
+    column-gap: var(--spacing-gutter);
+  }
   .gap-x-space-md {
     column-gap: var(--spacing-space-md);
   }
   .gap-y-3 {
     row-gap: calc(var(--spacing) * 3);
+  }
+  .gap-y-space-md {
+    row-gap: var(--spacing-space-md);
   }
   .gap-y-space-sm {
     row-gap: var(--spacing-space-sm);
@@ -2005,11 +2011,6 @@
   }
   .contrast-125 {
     --tw-contrast: contrast(125%);
-    filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
-  }
-  .drop-shadow-\[0_0_20px_rgba\(255\,255\,255\,0\.15\)\] {
-    --tw-drop-shadow-size: drop-shadow(0 0 20px var(--tw-drop-shadow-color, rgba(255,255,255,0.15)));
-    --tw-drop-shadow: var(--tw-drop-shadow-size);
     filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, );
   }
   .grayscale {
